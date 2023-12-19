@@ -33,7 +33,7 @@ PORT = int(environ.get('PORT', '8080'))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '')
+ADMINS = environ.get('ADMINS', '5808599296')
 if len(ADMINS) == 0:
     logging.error('ADMINS is missing, exiting now')
     exit()
@@ -61,7 +61,7 @@ if len(OPENAI_API) == 0:
     exit()
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://eeee:eeee@cluster0.wb3ywgn.mongodb.net/?retryWrites=true&w=majority")
 if len(DATABASE_URL) == 0: 
     logging.error('DATABASE_URL is missing, exiting now')
     exit()
