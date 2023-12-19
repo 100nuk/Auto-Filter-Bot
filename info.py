@@ -55,7 +55,7 @@ if len(SUPPORT_GROUP) == 0:
     logging.error('SUPPORT_GROUP is missing, exiting now')
     exit()
     
-OPENAI_API = environ.get('OPENAI_API', '') 
+OPENAI_API = environ.get('OPENAI_API', '0') 
 if len(OPENAI_API) == 0:
     logging.error('OPENAI_API is missing, exiting now')
     exit()
