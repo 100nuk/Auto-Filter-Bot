@@ -50,7 +50,7 @@ if len(LOG_CHANNEL) == 0:
 else:
     LOG_CHANNEL = int(LOG_CHANNEL)
     
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', 'https://t.me/movie_on1')
 if len(SUPPORT_GROUP) == 0:
     logging.error('SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -64,7 +64,7 @@ if len(OPENAI_API) == 0:
 
 # MongoDB information
 DATABASE_URL = environ.get('DATABASE_URL', "")
-if len(DATABASE_URL) == 0:
+if len(DATABASE_URL) == 0: 
     logging.error('DATABASE_URL is missing, exiting now')
     exit()
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
