@@ -97,13 +97,13 @@ TUTORIAL = environ.get("TUTORIAL", "https://t.me/SL_Bots_Updates")
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
 
 # stream features vars
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001758776529")
 if len(BIN_CHANNEL) == 0:
     logging.error('BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://test-stream-316c89440fcd.herokuapp.com/")
 if len(URL) == 0:
     logging.error('URL is missing, exiting now')
     exit()
