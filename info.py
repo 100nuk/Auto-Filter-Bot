@@ -50,12 +50,12 @@ if len(LOG_CHANNEL) == 0:
 else:
     LOG_CHANNEL = int(LOG_CHANNEL)
     
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', 'https://t.me/movie_on1')
 if len(SUPPORT_GROUP) == 0:
     logging.error('SUPPORT_GROUP is missing, exiting now')
     exit()
 else:
-    SUPPORT_GROUP = int(SUPPORT_GROUP)
+    SUPPORT_GROUP = int("https://t.me/movie_on1")
     
 OPENAI_API = environ.get('OPENAI_API', '') 
 if len(OPENAI_API) == 0:
