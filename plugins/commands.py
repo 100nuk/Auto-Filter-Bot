@@ -32,7 +32,7 @@ async def start(client, message):
         wish = get_wish()
         btn = [[
             InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton(' ● sʜᴀʀᴇ ᴍᴇ 🫂', url="https://t.me/share/url?url=https://t.me/Movie_search_V4_bot")
         ]]
         await message.reply(text=f"<b>ʜᴇʏ {message.from_user.mention}, <i>{wish}</i>\nʜᴏᴡ ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ??</b>", reply_markup=InlineKeyboardMarkup(btn))
         return 
@@ -134,7 +134,7 @@ async def start(client, message):
                 InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f"stream#{file.file_id}")
             ],[
                 InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-                InlineKeyboardButton('💡 Share me 💡', url="https://t.me/share/url?url=https://t.me/Movie_search_V4_bot")
+                InlineKeyboardButton('● sʜᴀʀᴇ ᴍᴇ 🫂', url="https://t.me/share/url?url=https://t.me/Movie_search_V4_bot")
             ],[
                 InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
             ]]
@@ -163,7 +163,7 @@ async def start(client, message):
         InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f"stream#{file_id}")
     ],[
         InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-        InlineKeyboardButton('💡 Share me 💡', url="https://t.me/share/url?url=https://t.me/Movie_search_V4_bot")
+        InlineKeyboardButton('● sʜᴀʀᴇ ᴍᴇ 🫂', url="https://t.me/share/url?url=https://t.me/Movie_search_V4_bot")
     ],[
         InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
     ]]
