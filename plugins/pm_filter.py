@@ -884,6 +884,7 @@ async def auto_filter(client, msg, spoll=False):
         message = msg
         settings = await get_settings(message.chat.id)
         search = message.text
+        m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
         files, offset, total_results = await get_search_results(search, offset=0, filter=True)
         if not files:
             if settings["spell_check"]:
@@ -895,6 +896,7 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
     if spoll:
+        m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
         await msg.message.delete()
     req = message.from_user.id if message.from_user else 0
     key = f"{message.chat.id}-{message.id}"
