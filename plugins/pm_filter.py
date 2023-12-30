@@ -31,6 +31,10 @@ async def stream_downloader(bot, query):
         file_id=file_id)
     online = f"{URL}watch/{msg.id}"
     download = f"{URL}download/{msg.id}"
+    xo = await query.message.reply_sticker("CAACAgUAAxkBAAEDbDplJjQc2YTF2mFOhWL2gY_SBfQMiwACzwUAAvqWsVQeji_NycEEEzAE")
+            await asyncio.sleep(1)
+            await xo.delete()
+
     await query.edit_message_reply_markup(
         reply_markup=InlineKeyboardMarkup(
         [
