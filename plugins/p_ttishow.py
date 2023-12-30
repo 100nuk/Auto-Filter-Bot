@@ -15,7 +15,7 @@ async def welcome(bot, message: ChatMemberUpdated):
         if message.new_chat_member.user.id == temp.ME:
             buttons = [[
                 InlineKeyboardButton('Updates Channel', url=UPDATES_LINK),
-                InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
+                InlineKeyboardButton(' ● sʜᴀʀᴇ ᴍᴇ 🫂', url="https://t.me/share/url?url=https://t.me/KK_Filter_bot")
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             user = message.from_user.mention if message.from_user else "Dear"
