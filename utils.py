@@ -225,7 +225,32 @@ async def save_group_settings(group_id, key, value):
     temp.SETTINGS.update({group_id: current})
     await db.update_settings(group_id, current)
 
+def extract_time(time_val):
+    if any(time_val.endswith(unit) for unit in ("s", "m", "h", "d")):
+        unit = time_val[-1]
+        time_num = time_val[:-1]  # type: str
+        if not time_num.isdigit():
+            return None
 
+        if unit == "s":
+            bantime = datetime.now() + timedelta(seconds=int(time_num)) 
+        elif unit == "m":
+            bantime = datetime.now() + timedelta(minutes=int(time_num))
+        elif unit == "h":
+            bantime = datetime.now() + timedelta(hours=int(time_num))
+        elif unit == "d":
+            bantime = datetime.now() + timedelta(days=int(time_num))
+        else:
+            # how even...?
+            return None
+        return bantime
+    else:
+        return None
+        
+def split_list(l, n):
+    for i in range(0, len(l), n):
+        yield l[i:i + n]  
+        
 def get_size(size):
     """Get size in readable format"""
 
