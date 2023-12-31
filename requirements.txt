@@ -13,3 +13,4 @@ telegraph
 openai==0.28
 pyromod==1.5
 datetime
+dispatcher
