@@ -270,7 +270,7 @@ def list_to_str(k):
     else:
         return ' '.join(f'{elem}, ' for elem in k)
 
- def extract_user(message: Message) -> Union[int, str]:
+def extract_user(message: Message) -> Union[int, str]:
     """extracts the user from a message"""
     # https://github.com/SpEcHiDe/PyroGramBot/blob/f30e2cca12002121bad1982f68cd0ff9814ce027/pyrobot/helper_functions/extract_user.py#L7
     user_id = None
