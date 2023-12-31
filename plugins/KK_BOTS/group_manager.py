@@ -10,7 +10,8 @@ from pyrogram import Client, filters, enums
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired, UserAdminInvalid
 
-from utils import extract_time, extract_user, admin_check, admin_filter                        
+from plugins.helper.admin_check import admin_check
+from plugins.helper.extract import extract_time, extract_user                        
 from info import ADMINS, PREFIX
 from Script import script
 from time import time
