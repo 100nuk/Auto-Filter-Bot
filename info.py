@@ -39,6 +39,8 @@ if len(ADMINS) == 0:
     exit()
 else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
+    
+PREFIX = environ.get("PREFIX", "/")
 
 # Channels
 INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1001635474063').split()]
