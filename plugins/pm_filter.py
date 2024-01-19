@@ -48,26 +48,6 @@ async def stream_downloader(bot, query):
         ]
     ))
 
-@Client.on_message((filters.group) & filters.regex("@")  | filters.regex("t.me"))
-async def nolink(bot,message):
-        
-	try:
-                 
-                buttons = [[
-                    InlineKeyboardButton('sᴜʀᴘʀɪsᴇ', url='https://t.me/movie_on1')
-                ]]
-                reply_markup = InlineKeyboardMarkup(buttons)
-                k = await message.reply_sticker("CAACAgUAAxkBAAEDuvRlqTOJi1ITO6OHtEx8YKuqiZ4XnAACLgADwSQxMY0Ma6d3tUJFNAQ") 
-                await asyncio.sleep(2)      
-                k = await k.delete()
-                hmm = await message.delete()
-                return
-                
-
-
-	except:
-		return
-
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     settings = await get_settings(message.chat.id)
@@ -108,7 +88,7 @@ async def give_filter(client, message):
             await message.reply_text('Report sent!' + ''.join(hidden_mentions))
             return
 
-        elif re.findall(r'https?://\S+|www\.\S+|t\.me/\S+', message.text):
+        elif re.findall(r'https?://\S+|www\.\S+|t\.me/\S+|@.\S+', message.text):
             if await is_check_admin(client, message.chat.id, message.from_user.id):
                 return
             await message.delete()
