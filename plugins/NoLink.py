@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from info import BOT_TOKEN, API_ID, API_HASH
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 import asyncio
-from info import SUPPORT_CHAT
+#from info import SUPPORT_CHAT
 import os
 from pyrogram import Client, filters, enums
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
