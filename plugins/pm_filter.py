@@ -88,11 +88,11 @@ async def give_filter(client, message):
             await message.reply_text('Report sent!' + ''.join(hidden_mentions))
             return
 
-        elif re.findall(r'https?://\S+|www\.\S+|t\.me/\S+|@\S+', message.text):
+        elif re.findall(r'https?://\S+|www\.\S+|t\.me/\S+|@\S+|porn\S+', message.text):
             if await is_check_admin(client, message.chat.id, message.from_user.id):
                 return
             await message.delete()
-            return await message.reply('Links not allowed here!')
+            return await message.reply_sticker("CAACAgUAAxkBAAED2tFlt60bRtWbzxr3aHx7ReVfAbGW4wACvwADyJRkFFJLdbdZ2LqdNAQ")
         
         elif '#request' in message.text.lower():
             if message.from_user.id in ADMINS:
