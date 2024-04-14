@@ -90,12 +90,12 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 # Other
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "earnpro.in")
-SHORTLINK_API = environ.get("SHORTLINK_API", "5a41d566bb571fb54ea5f3a963c8be58ab2ed022")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "onepagelink.in")
+SHORTLINK_API = environ.get("SHORTLINK_API", "fa5a96a72e813394d262b8c3379ba4d7d6755e52")
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = is_enabled(environ.get("IS_VERIFY", "True"), False)
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/ilove_ram/149")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/ilove_ram/139")
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
 
 # stream features vars
